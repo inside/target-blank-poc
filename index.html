@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      A POC to demonstrate a security issue when using target="_blank" in links
+    </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>
+      Click on the links below: it opens an external site in a new tab or window
+    </h1>
+    <ul>
+      <li>
+        Secure link for modern browsers:
+        <a href="malicious.html" rel="noopener" target="_blank">Go to a malicious site</a> using rel="noopener".
+      </li>
+      <li>
+        Secure link for old browsers:
+        <a href="malicious.html" rel="noreferrer" target="_blank">Go to a malicious site</a> using rel="noreferrer".
+      </li>
+      <li>
+        Secure link for everyone:
+        <a href="malicious.html" rel="noreferrer" target="_blank">Go to a malicious site</a> using rel="noopener noreferrer".
+      </li>
+      <li>
+        <a href="malicious.html" target="_blank">Click HERE IT'S TOTALLY FINE, NO WORRIES, TRUST ME I'M YOUR FRIEND!!</a> no rel attribute.
+      </li>
+    </ul>
+  </body>
+</html>
